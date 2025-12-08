@@ -17,13 +17,20 @@ export const locations = [
   'Greater Accra',
   'Ashanti Region',
   'Western Region',
+  'Western North Region',
+  'Ahafo Region',
+  'Bono Region',
+  'Bono East Region',
   'Eastern Region',
   'Central Region',
   'Northern Region',
   'Volta Region',
+  'Oti Region',
+  'Savannah Region',
+  'North East Region',
   'Upper East Region',
   'Upper West Region',
-  'Brong-Ahafo Region'
+  
 ];
 
 export const mockListings = [
@@ -106,7 +113,7 @@ export const mockListings = [
     price: 8500000,
     unit: 'unit',
     category: 'Tractors',
-    location: 'Brong-Ahafo Region',
+    location: 'Bono Region',
     seller: {
       name: 'Farm Equipment Hub',
       role: 'Input Supplier',
