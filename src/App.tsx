@@ -1,3 +1,4 @@
+import { SignUp } from './components/SignUp';
 import { useState } from 'react';
 import { AuthProvider, useAuth } from './utils/auth/authContext';
 import { Home } from './components/Home';
