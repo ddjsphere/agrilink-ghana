@@ -94,18 +94,20 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
                   </button>
                 </>
               ) : (
-                <button 
-                  onClick={() => setShowLoginModal(true)}
-                  className="bg-white text-cyan-600 hover:bg-cyan-50 px-4 py-2 rounded-lg transition"
-                >
-                  Sign In
-                </button>
-                <button
-                  onClick={() => onNavigate('signup')}
-                  className="px-3 py-1 rounded bg-green-600 text-white text-sm"
-                >
-                  Sign up
-                </button>
+                <>
+                  <button 
+                    onClick={() => setShowLoginModal(true)}
+                    className="bg-white text-cyan-600 hover:bg-cyan-50 px-4 py-2 rounded-lg transition"
+                  >
+                    Sign In
+                  </button>
+                  <button
+                    onClick={() => onNavigate('signup')}
+                    className="px-4 py-2 rounded-lg bg-green-500 hover:bg-green-600 text-white text-sm transition"
+                  >
+                    Sign up
+                  </button>
+                </>
               )}
               
               <button className="md:hidden p-2">
