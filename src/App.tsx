@@ -7,7 +7,7 @@ import { OrderFlow } from './components/OrderFlow';
 import { Header } from './components/Header';
 import { Toaster } from 'sonner@2.0.3';
 
-type Page = 'home' | 'listing' | 'dashboard' | 'order';
+type Page = 'home' | 'listing' | 'dashboard' | 'order' | 'signup';
 
 /**
  * Coming Soon page – this is what visitors will see
