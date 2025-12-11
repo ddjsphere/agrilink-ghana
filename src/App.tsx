@@ -103,7 +103,10 @@ function AppContent() {
           onViewListing={handleViewListing}
         />
       )}
-
+      {currentPage === 'signup' && (
+         <SignUp onBack={() => setCurrentPage('home')} 
+         />
+      )}
       {currentPage === 'order' && selectedListingId && (
         <OrderFlow
           listingId={selectedListingId}
@@ -112,6 +115,8 @@ function AppContent() {
           onComplete={() => setCurrentPage('dashboard')}
         />
       )}
+     
+
 
       <Toaster position="top-right" richColors />
     </div>
