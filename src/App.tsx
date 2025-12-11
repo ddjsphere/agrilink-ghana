@@ -31,8 +31,7 @@ function ComingSoon() {
         🚜 Agrilink Ghana – Coming Soon
       </h1>
       <p style={{ maxWidth: 520, marginBottom: '1rem' }}>
-        We’re building an agricultural marketplace to connect farmers, suppliers,
-        buyers and other stakeholders across Ghana. The platform will be live soon.
+        We’re building something special.The platform will be live soon.
       </p>
       <p>📧 Contact: info@agrilinkghana.com</p>
     </main>
