@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useAuth } from '../utils/auth/authContext';
 import { LoginModal } from './auth/LoginModal';
 
-type Page = 'home' | 'listing' | 'dashboard' | 'order';
+type Page = 'home' | 'listing' | 'dashboard' | 'order' | 'signup';
 
 interface HeaderProps {
   currentUser: {
@@ -99,6 +99,12 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
                   className="bg-white text-cyan-600 hover:bg-cyan-50 px-4 py-2 rounded-lg transition"
                 >
                   Sign In
+                </button>
+                <button
+                  onClick={() => onNavigate('signup')}
+                  className="px-3 py-1 rounded bg-green-600 text-white text-sm"
+                >
+                  Sign up
                 </button>
               )}
               
