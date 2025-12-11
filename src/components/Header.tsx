@@ -31,14 +31,14 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <button 
+            <button
               onClick={() => onNavigate('home')}
               className="flex items-center gap-2 hover:opacity-90 transition"
             >
               <div className="bg-white text-cyan-600 p-2 rounded-lg">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L4 7v10c0 5.5 3.8 9 8 10 4.2-1 8-4.5 8-10V7l-8-5zm0 2.5l6 3.75v7.75c0 4-2.7 6.9-6 7.8-3.3-.9-6-3.8-6-7.8V8.25l6-3.75z"/>
-                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 2L4 7v10c0 5.5 3.8 9 8 10 4.2-1 8-4.5 8-10V7l-8-5zm0 2.5l6 3.75v7.75c0 4-2.7 6.9-6 7.8-3.3-.9-6-3.8-6-7.8V8.25l6-3.75z" />
+                  <circle cx="12" cy="12" r="3" />
                 </svg>
               </div>
               <div>
@@ -49,9 +49,11 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
-              <button 
+              <button
                 onClick={() => onNavigate('home')}
-                className={`hover:text-cyan-200 transition ${currentPage === 'home' ? 'border-b-2 border-white' : ''}`}
+                className={`hover:text-cyan-200 transition ${
+                  currentPage === 'home' ? 'border-b-2 border-white' : ''
+                }`}
               >
                 Browse
               </button>
@@ -68,15 +70,18 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
               <button className="hover:bg-cyan-700 p-2 rounded-lg transition">
                 <ShoppingCart size={20} />
               </button>
-              
+
               {user ? (
                 <>
-                  <button 
+                  <button
                     onClick={() => onNavigate('dashboard')}
                     className="flex items-center gap-2 hover:bg-cyan-700 px-3 py-2 rounded-lg transition"
                   >
-                    <img 
-                      src={currentUser.avatar || `https://api.dicebear.com/7.x/avataaars/svg?seed=${currentUser.name}`} 
+                    <img
+                      src={
+                        currentUser.avatar ||
+                        `https://api.dicebear.com/7.x/avataaars/svg?seed=${currentUser.name}`
+                      }
                       alt={currentUser.name}
                       className="w-8 h-8 rounded-full border-2 border-white"
                     />
@@ -85,7 +90,7 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
                       <p className="text-xs opacity-75">{currentUser.role}</p>
                     </div>
                   </button>
-                  <button 
+                  <button
                     onClick={handleSignOut}
                     className="hover:bg-cyan-700 p-2 rounded-lg transition"
                     title="Sign Out"
@@ -94,8 +99,9 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
                   </button>
                 </>
               ) : (
-                <>
-                  <button 
+                // 🔹 LOGGED-OUT: Sign In + Sign Up side by side
+                <div className="flex items-center gap-2">
+                  <button
                     onClick={() => setShowLoginModal(true)}
                     className="bg-white text-cyan-600 hover:bg-cyan-50 px-4 py-2 rounded-lg transition"
                   >
@@ -107,9 +113,9 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
                   >
                     Sign up
                   </button>
-                </>
+                </div>
               )}
-              
+
               <button className="md:hidden p-2">
                 <Menu size={24} />
               </button>
@@ -117,11 +123,12 @@ export function Header({ currentUser, onNavigate, currentPage }: HeaderProps) {
           </div>
         </div>
       </header>
-      
-      <LoginModal 
+
+      <LoginModal
         isOpen={showLoginModal}
         onClose={() => setShowLoginModal(false)}
       />
     </>
   );
 }
+
